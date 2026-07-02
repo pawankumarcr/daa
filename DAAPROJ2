@@ -75,8 +75,8 @@ def rabin_karp(text, pattern, q=101):
     return matches, comparisons
  
 # --- Main Execution ---
-text = 'ABABABAAABBBAA'
-pattern = 'ABAB'
+text = 'XXAABBCCDDYYDFFHHXXAABDDCCF'
+pattern = 'XAAB' 
 print(f'Text:    {text}')
 print(f'Pattern: {pattern}')
  
@@ -90,7 +90,7 @@ print(f'RK     -> Matches at: {m3}, Comparisons: {c3}')
  
 # Performance comparison
 text_large = ''.join(random.choices('ABCD', k=10000))
-patterns = ['AB', 'ABCD', 'ABCDAB', 'ABCDABCD']
+patterns = ['XA', 'XAAB', 'BBCCDDYYD', 'ABDDC']
 print(f'\n{"Pattern":>12} {"Naive":>10} {"KMP":>10} {"RK":>10}')
 print('-' * 50)
 for p in patterns:
